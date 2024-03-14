@@ -78,3 +78,30 @@ window.onload = function() {
     let container = document.getElementById('imageContainer');
     container.style.backgroundColor = 'rgb(' + dominantColor.join(',') + ')';
 };
+
+function toggleMonochrome() {
+    console.log("here")
+    let images = document.querySelectorAll('img');
+    images.forEach(function(image) {
+        if (image.classList.contains('monochrome')) {
+            image.classList.remove('monochrome');
+        } else {
+            image.classList.add('monochrome');
+        }
+    });
+}
+
+function toggleDarkMode() {
+
+    let body = document.body;
+    body.classList.toggle('dark-mode');
+    
+    let footer = document.querySelector('footer');
+    footer.classList.toggle('dark-mode');
+
+    let moreProdGridItems = document.querySelectorAll('.more-prod-grid-item');
+    moreProdGridItems.forEach(function(item) {
+        item.classList.toggle('dark');
+    });
+
+}
