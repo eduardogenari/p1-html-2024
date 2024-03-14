@@ -15,15 +15,18 @@
         <h1>| project title |</h1>
     </header>
 
-    <div class="grid-container">
+<!--
+    <main>
         <div class="grid-item">
             <img src="./imgs/1-1_prod.jpg" alt="product" /> 
             <div class="prod-info">
-                <p>|nm_07st-s|</p>
+                <p><strong>|NM_07ST-S|</strong></p>
+                <hr>
+                <p>stool, stacking</p>
                 <p>wip</p>
                 <p>wood, steel</p>
                 <p>2024</p>
-                <p>stool, stacking</p>
+                
             </div>
         </div>
         <div class="grid-item">
@@ -33,7 +36,7 @@
             </div>
         </div>
         <div class="grid-item">
-            <img src="./imgs/3-1_prod.jpg" alt="product" /> 
+           <img src="./imgs/3-1_prod.jpg" alt="product" />
             <div class="prod-info">
                 <p>xxx</p>
             </div>
@@ -74,12 +77,53 @@
                 <p>xxx</p>
             </div>
         </div>
+    </main>
+-->
+
+    <div class="index-grid">
+        <div class="index-grid-item" onclick="toggleHeight(this)">
+            <img src="./imgs/1-1_prod.jpg" alt="product" /> 
+            <div class="index-prod-info">
+                <p><strong>|NM_07ST-S|</strong></p>
+                <p>stool, stacking</p>
+                <p>wip</p>
+                <p>wood, steel</p>
+                <p>2024</p>
+                
+            </div>
+            <!-- <img src="./imgs/1-1_prod.jpg" alt="product" /> -->
+        </div>
+                <div class="index-grid-item" onclick="toggleHeight(this)">
+            <div class="index-prod-info">
+                <p><strong>|NM_07ST-S|</strong></p>
+                <p>stool, stacking</p>
+                <p>wip</p>
+                <p>wood, steel</p>
+                <p>2024</p>
+                
+            </div>
+            <!-- <img src="./imgs/1-1_prod.jpg" alt="product" /> -->
+        </div>
+        <div class="index-grid-item" onclick="toggleHeight(this)"></div>
+        <div class="index-grid-item"></div>
+        <div class="index-grid-item"></div>
+        <div class="index-grid-item"></div>
+        <div class="index-grid-item"></div>
+        <div class="index-grid-item"></div>
+        <div class="index-grid-item"></div>
     </div>
+
+
     <footer>
         <div class="footer-info">
-            <p>| project title |</p>
+            <div class="footer-info-item" onclick="restartPage()">
+                <p>| project title |</p>
+            </div>
             <p>index</p>
-            <p>dark mode</p>
+            <div class="darkModeToogle">
+                <p>dark mode</p>
+            </div>
+
             <p class="monochrome">monochrome</p>
             <p>info</p>
         </div>
