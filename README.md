@@ -1,3 +1,7 @@
+# Link Behance
+
+[Link Behance](https://www.behance.net/gallery/193979113/p1-html-2024)
+
 # Página HTML estática
 
 Se trata de hacer una página web (no una _app_) con cierta complejidad, en un solo documento (más estilos) que tenga bastante estructura y un diseño lo mejor posible (según la destreza de cada uno). La web tiene que hacerte investigar formas de hacer ciertas cosas que hagas por primera vez. Si es la primera vez que usas HTML, haz algo que no sea demasiado difícil, pero si ya sabes HTML y CSS, aprovecha para ponerte a prueba con algo nuevo: grids, animaciones en CSS, etc.
