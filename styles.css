@@ -60,9 +60,10 @@ main {
     background-color: white; 
     transform: translateY(20%); 
     animation: slideIn 1s ease forwards; 
-    cursor: pointer;
+    cursor: url(./imgs/square_PNG35.cur), auto;
     overflow: hidden;
 }
+
 
 @keyframes slideIn {
     0% {
@@ -81,7 +82,7 @@ main {
     max-width: 100%;
     object-fit: cover; 
     display: block;
-    /*filter: grayscale(100%);*/
+    opacity: 1;
 }
 
 .prod-info {
@@ -97,12 +98,14 @@ main {
     flex-direction: column;
     justify-content: start;
     align-items:start;
-    text-align: center;
+    text-align:left;
     padding: 20px;
+    padding-right: 100px;
 }
 
+
 .grid-item:hover .prod-info {
-    opacity: 1;
+    opacity: 0.9;
 }
 
 footer {

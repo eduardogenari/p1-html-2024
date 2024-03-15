@@ -1,25 +1,4 @@
-/*
-document.addEventListener("DOMContentLoaded", function() {
-    var header = document.querySelector('header');
-    var title = '| project title |';
-    var index = 0;
 
-    function typeTitle() {
-        header.innerHTML = title.slice(0, index);
-        index++;
-
-        if (index <= title.length) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setTimeout(typeTitle, 30); 
-        } else {
-            setTimeout(function() {
-                header.style.height = '0';
-            }, 2000); 
-        }
-    }
-    typeTitle();
-});
-*/
 
 document.addEventListener("DOMContentLoaded", function() {
     let header = document.querySelector('header');
@@ -104,4 +83,29 @@ function toggleDarkMode() {
         item.classList.toggle('dark');
     });
 
+}
+
+function getRandomColor() {
+    return '#' + Math.floor(Math.random()*16777215).toString(16);
+}
+
+// Function to get the predominant color of an image (placeholder)
+function getPredominantColor(imageSrc) {
+    // Placeholder: Return a random color
+    return getRandomColor();
+}
+
+// Function to toggle image opacity and set background color to predominant color
+function togglePredominantColor() {
+    let imageContainers = document.querySelectorAll('.image-color');
+    imageContainers.forEach(function(container) {
+        let image = container.querySelector('img');
+        let predominantColor = getPredominantColor(image.src);
+        
+        // Set the opacity of the image to 0
+        image.style.opacity = '0';
+
+        // Set the background color of the image container to the predominant color
+        container.style.backgroundColor = predominantColor;
+    });
 }
