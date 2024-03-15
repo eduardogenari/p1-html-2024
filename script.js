@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
     let header = document.querySelector('header');
     let h1Element = header.querySelector('h1');
@@ -22,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     typeTitle();
 });
 
+
 document.addEventListener("DOMContentLoaded", function() {
     let gridItems = document.querySelectorAll('.grid-item');
 
@@ -30,45 +29,15 @@ document.addEventListener("DOMContentLoaded", function() {
         item.style.animationDelay = delay + 'ms';
     });
 
-    let main = document.querySelector('main');
-    main.style.opacity = '1';
+    let coverGrid = document.querySelector('.cover-grid');
+    coverGrid.style.opacity = '1';
 });
 
-
-const toggleDarkModeButton = document.getElementById('toggleDarkMode');
-const body = document.body;
-
-toggleDarkModeButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-});
 
 function restartPage() {
     window.location.reload();
 }
 
-
-window.onload = function() {
-    let image = document.getElementById('img');
-    let colorThief = new ColorThief();
-
-    let dominantColor = colorThief.getColor(image);
-
-    // Apply the dominant color as background color to the container
-    let container = document.getElementById('imageContainer');
-    container.style.backgroundColor = 'rgb(' + dominantColor.join(',') + ')';
-};
-
-function toggleMonochrome() {
-    console.log("here")
-    let images = document.querySelectorAll('img');
-    images.forEach(function(image) {
-        if (image.classList.contains('monochrome')) {
-            image.classList.remove('monochrome');
-        } else {
-            image.classList.add('monochrome');
-        }
-    });
-}
 
 function toggleDarkMode() {
 
@@ -82,30 +51,17 @@ function toggleDarkMode() {
     moreProdGridItems.forEach(function(item) {
         item.classList.toggle('dark');
     });
-
 }
 
-function getRandomColor() {
-    return '#' + Math.floor(Math.random()*16777215).toString(16);
-}
 
-// Function to get the predominant color of an image (placeholder)
-function getPredominantColor(imageSrc) {
-    // Placeholder: Return a random color
-    return getRandomColor();
-}
-
-// Function to toggle image opacity and set background color to predominant color
-function togglePredominantColor() {
-    let imageContainers = document.querySelectorAll('.image-color');
-    imageContainers.forEach(function(container) {
-        let image = container.querySelector('img');
-        let predominantColor = getPredominantColor(image.src);
-        
-        // Set the opacity of the image to 0
-        image.style.opacity = '0';
-
-        // Set the background color of the image container to the predominant color
-        container.style.backgroundColor = predominantColor;
+function toggleMonochrome() {
+    console.log("here")
+    let images = document.querySelectorAll('img');
+    images.forEach(function(image) {
+        if (image.classList.contains('monochrome')) {
+            image.classList.remove('monochrome');
+        } else {
+            image.classList.add('monochrome');
+        }
     });
 }

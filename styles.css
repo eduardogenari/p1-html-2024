@@ -45,7 +45,7 @@ h1 {
     overflow: hidden;
 }
 
-main {
+.cover-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr); 
     grid-gap: 7.5px;
@@ -54,7 +54,7 @@ main {
     grid-auto-rows: calc((100% - 15px - 2 * 7.5px) / 3.25); 
 }
 
-.grid-item {
+.cover-grid-item {
     width: 100%;
     position: relative;
     background-color: white; 
@@ -63,7 +63,6 @@ main {
     cursor: url(./imgs/square_PNG35.cur), auto;
     overflow: hidden;
 }
-
 
 @keyframes slideIn {
     0% {
@@ -76,7 +75,7 @@ main {
     }
 }
 
-.grid-item img {
+.cover-grid-item img {
     width: 100%;
     height: 100%;
     max-width: 100%;
@@ -103,8 +102,7 @@ main {
     padding-right: 100px;
 }
 
-
-.grid-item:hover .prod-info {
+.cover-grid-item:hover .prod-info {
     opacity: 0.9;
 }
 
@@ -142,11 +140,7 @@ footer {
     cursor: pointer;
 }
 
-
-/* group more products */
-
 .more-prod-grid {
-    /*height: calc(100vh - 125px);*/
     display: grid;
     grid-template-columns: repeat(1, 1fr); 
     padding: 125px 35px 125px 15px;
@@ -182,7 +176,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*color: 1px solid black;*/
     margin-left: 125px;
     margin-right: 125px;
 }
@@ -196,7 +189,7 @@ footer {
 }
 
 .more-prod-grid-item:hover img {
-    transform: translateX(10px); /* Translate image by 10px on hover */
+    transform: translateX(10px);
 }
 
 .prod-info-extra {
@@ -207,21 +200,17 @@ footer {
     filter: grayscale(100%);
 }
 
-
-/* group media queries */
-
 @media (min-width: 700px) {
-    main {
+    .cover-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1300px) {
-    main {
+    .cover-grid {
         grid-template-columns: repeat(3, 1fr); 
     }
     .prod-info-extra {
         opacity: 1;
     }
-    
 }
