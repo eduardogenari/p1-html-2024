@@ -14,23 +14,23 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             setTimeout(function() {
                 header.style.height = '0';
-            }, 2000); 
+            }, 1500); 
         }
     }
+    
     typeTitle();
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
-    let gridItems = document.querySelectorAll('.grid-item');
+    let gridItems = document.querySelectorAll('.cover-grid-item');
 
     gridItems.forEach(function(item, index) {
-        let delay = index * 100; 
+        var delay = index * 100; 
         item.style.animationDelay = delay + 'ms';
     });
 
-    let coverGrid = document.querySelector('.cover-grid');
-    coverGrid.style.opacity = '1';
+    let gridContainer = document.querySelector('.cover-grid');
+    gridContainer.style.opacity = '1';
 });
 
 
