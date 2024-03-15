@@ -42,7 +42,7 @@ function restartPage() {
 function toggleDarkMode() {
 
     let body = document.body;
-    body.classList.toggle('dark-mode');
+    let isDarkMode = body.classList.toggle('dark-mode');
     
     let footer = document.querySelector('footer');
     footer.classList.toggle('dark-mode');
@@ -51,17 +51,24 @@ function toggleDarkMode() {
     moreProdGridItems.forEach(function(item) {
         item.classList.toggle('dark');
     });
+
+    if (isDarkMode) {
+        document.querySelector('.text-dark-mode p').textContent = "light";
+    } else {
+        document.querySelector('.text-dark-mode p').textContent = "dark";
+    }
 }
 
 
 function toggleMonochrome() {
-    console.log("here")
     let images = document.querySelectorAll('img');
     images.forEach(function(image) {
         if (image.classList.contains('monochrome')) {
             image.classList.remove('monochrome');
+            document.querySelector('.text-monochrome p').textContent = "gray";
         } else {
             image.classList.add('monochrome');
+            document.querySelector('.text-monochrome p').textContent = "color";
         }
     });
 }

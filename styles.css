@@ -4,7 +4,7 @@
     --background-color-dark: hsla(0, 0%, 11%, 1);;
     --text-color-dark: white;
     --hover-color-light: rgb(245, 245, 245);
-    --hover-color-dark: hsla(0, 0%, 13%, 1);
+    --hover-color-dark: hsla(0, 0%, 15%, 1);
 }
 
 body {
@@ -115,6 +115,7 @@ footer {
     display: flex;
     background-color: var(--background-color-light);
     color: var(--text-color-light);
+    margin-right: 25px;
 }
 
 .dark-mode footer {
@@ -123,12 +124,12 @@ footer {
 }
 
 .footer-info {
-    margin-right: 40px;
     width: 100%;
     display: flex;
     border-top: 1px solid black; 
     border-bottom: 1px solid black; 
     justify-content: space-between;
+    margin-right: 35px;
 }
 
 .dark-mode .footer-info {
@@ -173,11 +174,9 @@ footer {
 
 .more-prod-info{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 125px;
-    margin-right: 125px;
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .more-prod-grid-item:hover {
@@ -204,11 +203,29 @@ footer {
     .cover-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .footer-info {
+        justify-content: start;
+    }
+    .footer-info-item {
+        margin-right: 25px;
+    }
 }
 
 @media (min-width: 1300px) {
     .cover-grid {
         grid-template-columns: repeat(3, 1fr); 
+    }
+    .more-prod-info{
+        width: 100%;
+        display: flex;
+        align-items:start;
+        justify-content: start;
+        margin-left: 100px;
+        margin-right: 10px;
+    }
+    .more-prod-info > * {
+        width: 100%;
+        margin-right: 50px;
     }
     .prod-info-extra {
         opacity: 1;
