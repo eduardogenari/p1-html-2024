@@ -4,7 +4,7 @@
 
 # Link GitHub Pages
 
-[Link GitHub Pages](https://eduardogenari.github.io/p2-typescript-2024/)
+[Link GitHub Pages](https://eduardogenari.github.io/p1-html-2024/)
 
 # Página HTML estática
 
